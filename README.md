@@ -1,39 +1,52 @@
-# Synchrotron micro-CT of four crystals
+# Supplementary Data – Synchrotron Micro-CT and Geochemical Dataset
 
-Micro-CT of four crystals from the 2023-2024 Fagradalsfjall and Svartsengi eruptions, imaged at the SYRMEP beamline (Elettra).
+This GitHub repository contains supplementary material associated with the manuscript:
 
-- **[Slice viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_4panel_viewer.html)**: the four crystals each with its own play button and 500 µm scale bar.
-- **[3D viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_3d_viewer.html)**: rotate and cut through each crystal; choose the crystal from the drop-down.
+**A common near-Moho crystal mush zone under Fagradalsfjall and Sundhnúksgígar**
 
-| Panel | Crystal | Sample | Mineral |
-|---|---|---|---|
-| 1 | 102 | Fagradalsfjall 2023 | Plagioclase |
-| 2 | 128 | Svartsengi December 2023 | Olivine |
-| 3 | 150 | Svartsengi February 2024 | Olivine |
-| 4 | 166 | Svartsengi March-May 2024 | Olivine |
+Alberto Caracciolo, Enikő Bali, Simon Matthews, Heini Merrill, Sæmundur A. Halldórsson, Marko Prašek, Takeshi Hanyu, Kenji Shimizu, Qing Chang, Takayuki Ushikubo
 
-## Data
+## Repository contents
 
-- Voxel size 0.9 µm, 28 keV.
-- Slice viewer: every 3rd slice, 800 px frames. Grey levels are auto-contrasted per crystal (0.5-99.8 percentile of the stack).
-- 3D viewer: 3.6 µm voxels (4.5 µm for Crystal 102; its melt is segmented on a 2.7 µm grid).
+The repository provides interactive synchrotron micro-computed tomography (micro-CT) reconstructions of four crystals from the 2023–2024 Fagradalsfjall and Sundhnúksgígar eruptions, together with the geochemical dataset associated with the manuscript.
 
-## Phases in the 3D viewer
+### 1. Synchrotron micro-CT reconstructions
 
-Phases are set from grey level (X-ray attenuation):
+Four crystals were imaged at the SYRMEP beamline (Elettra) at a voxel resolution of 0.9 µm and an X-ray energy of 28 keV. The reconstructions allow visualisation of crystal interiors, melt inclusions and enclosed bubbles.
 
-- **Voids**: enclosed cavities.
-- **Melt**: glass-like material.
-- **Crystal**: everything else. Zoning shows as shading.
+Two interactive visualisation tools are available:
 
-## Rebuild
+- **[2D slice viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_4panel_viewer.html):** Displays sequential cross-sections through the four crystals, with individual playback controls and 500 µm scale bars.
+- **[3D viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_3d_viewer.html):** Allows interactive rotation and sectioning of individual crystals, with segmented crystal, melt and void phases distinguished by X-ray attenuation.
 
-Needs the original TIFF stacks plus `numpy`, `scipy`, `Pillow` and `matplotlib`.
+| Crystal | Sample | Mineral |
+|---|---|---|
+| 102 | Fagradalsfjall 2023 | Plagioclase |
+| 128 | Sundhnúksgígar December 2023 | Olivine |
+| 150 | Sundhnúksgígar February 2024 | Olivine |
+| 166 | Sundhnúksgígar March–May 2024 | Olivine |
+
+### 2. Geochemical dataset
+
+The repository also contains the geochemical dataset supporting the manuscript, including analytical data used to investigate melt inclusion compositions and the magmatic processes operating beneath Fagradalsfjall and Sundhnúksgígar.
+
+## Technical information
+
+- **2D slice viewer:** Every third slice displayed at 800 px resolution, with grey levels adjusted using the 0.5–99.8 percentile range for each crystal.
+- **3D viewer:** Reconstructions use 3.6 µm voxels (4.5 µm for Crystal 102, with melt segmented on a 2.7 µm grid).
+- **Phase segmentation:** Based on differences in X-ray attenuation, distinguishing voids (enclosed cavities), melt (glass-like material) and the surrounding crystal.
+
+### Rebuilding the viewers
+
+The original TIFF stacks and the Python packages `numpy`, `scipy`, `Pillow` and `matplotlib` are required.
 
 ```bash
 cd code
+
 # TOMO_DATA_ROOT = folder containing Eruption_2023, Svartsengi_23D, ...
 # TOMO_OUT_DIR   = output folder (default: current folder)
-python make_tomo_4panel.py   # slice viewer
+
+python make_tomo_4panel.py   # 2D slice viewer
 python make_tomo_3d.py       # 3D viewer
 ```
+
