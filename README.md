@@ -28,7 +28,7 @@ Two interactive visualisation tools are available:
 
 ### 2. Geochemical dataset
 
-The repository also contains the geochemical dataset supporting the manuscript, including analytical data used to investigate melt inclusion compositions and the magmatic processes operating beneath Fagradalsfjall and Sundhnúksgígar.
+The repository also contains the geochemical dataset supporting the manuscript, including RAMAN, EMPA, LA-ICP-MS, SIMS and 3D volumes of melt inclusions and bubbles.
 
 ## Technical information
 
