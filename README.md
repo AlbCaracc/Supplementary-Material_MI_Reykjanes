@@ -16,8 +16,8 @@ Four crystals were imaged at the SYRMEP beamline (Elettra) at a voxel resolution
 
 Two interactive visualisation tools are available:
 
-- **[2D slice viewer](https://albcaracc.github.io/Supplementary-Material_MI_Reykajnes/tomo_4panel_viewer.html):** Displays sequential cross-sections through the four crystals, with individual playback controls and 500 µm scale bars.
-- **[3D viewer](https://albcaracc.github.io/Supplementary-Material_MI_Reykajnes/tomo_3d_viewer.html):** Allows interactive rotation and sectioning of individual crystals, with segmented crystal, melt and void phases distinguished by X-ray attenuation.
+- **[2D slice viewer](https://albcaracc.github.io/Supplementary-Material_MI_Reykjanes/tomo_4panel_viewer.html):** Displays sequential cross-sections through the four crystals, with individual playback controls and 500 µm scale bars.
+- **[3D viewer](https://albcaracc.github.io/Supplementary-Material_MI_Reykjanes/tomo_3d_viewer.html):** Allows interactive rotation and sectioning of individual crystals, with segmented crystal, melt and void phases distinguished by X-ray attenuation.
 
 | Crystal | Sample | Mineral |
 |---|---|---|
