@@ -2,7 +2,7 @@
 
 Micro-CT of four crystals from the 2023-2024 Fagradalsfjall and Svartsengi eruptions, imaged at the SYRMEP beamline (Elettra).
 
-- **[Slice viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_4panel_viewer.html)**: the four crystals in eruption order, each with its own play button and 500 µm scale bar.
+- **[Slice viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_4panel_viewer.html)**: the four crystals each with its own play button and 500 µm scale bar.
 - **[3D viewer](https://albcaracc.github.io/syrmep-crystal-tomography/tomo_3d_viewer.html)**: rotate and cut through each crystal; choose the crystal from the drop-down.
 
 | Panel | Crystal | Sample | Mineral |
@@ -20,15 +20,11 @@ Micro-CT of four crystals from the 2023-2024 Fagradalsfjall and Svartsengi erupt
 
 ## Phases in the 3D viewer
 
-Phases are set from grey level (X-ray attenuation), not chemistry:
+Phases are set from grey level (X-ray attenuation):
 
 - **Voids**: enclosed cavities.
 - **Melt**: glass-like material.
-  - Olivine: solid voxels darker than a grey limit chosen for each crystal (`MELT_MAX` in `code/make_tomo_3d.py`).
-  - Plagioclase (Crystal 102): glass is only slightly denser than the host, so a global threshold fails. Melt is taken as blobs brighter than the local host level, found on a finer 2.7 µm grid. Blobs must lie at least 60 µm below the surface and be at least 16 µm thick, which removes the bright surface halo and the thin bright fringes along cracks.
 - **Crystal**: everything else. Zoning shows as shading.
-
-Melt is best defined in Crystals 150 and 102, where it forms discrete inclusions (many with a shrinkage bubble). In Crystal 102, inclusions smaller than about 16 µm or within 60 µm of the surface are not picked up. In Crystal 128 melt is a thin glass film, and in Crystal 166 the "melt" class is the whole groundmass. Embayment glass with the same grey level as the Fo-rich core is not separated.
 
 ## Rebuild
 
